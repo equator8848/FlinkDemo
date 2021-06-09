@@ -1,4 +1,4 @@
-package com.equator.test;
+package com.equator.wordcount;
 
 import lombok.extern.slf4j.Slf4j;
 import org.apache.flink.api.common.serialization.SimpleStringSchema;
@@ -10,7 +10,6 @@ import org.apache.flink.streaming.api.windowing.time.Time;
 import org.apache.flink.streaming.connectors.kafka.FlinkKafkaConsumer;
 import org.apache.flink.util.Collector;
 import org.apache.kafka.clients.consumer.ConsumerConfig;
-import org.apache.kafka.common.protocol.types.Field;
 
 import java.util.Properties;
 
@@ -30,7 +29,7 @@ public class WordCount {
         conf.put(ConsumerConfig.GROUP_ID_CONFIG, "flink-group");
 
         // 设置数据源
-        String inputTopic = "flink-test-topic";
+        String inputTopic = "flink-wordcount-topic";
         FlinkKafkaConsumer<String> consumer = new FlinkKafkaConsumer<>(inputTopic, new SimpleStringSchema(), conf);
         DataStream<String> stream = env.addSource(consumer);
 

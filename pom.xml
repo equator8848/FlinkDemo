@@ -62,7 +62,7 @@
                     <archive>
                         <manifest>
                             <addClasspath>true</addClasspath>
-                            <mainClass>com.equator.test.WordCount</mainClass>
+                            <mainClass>com.equator.wordcount.WordCount</mainClass>
                         </manifest>
                     </archive>
                     <descriptorRefs>

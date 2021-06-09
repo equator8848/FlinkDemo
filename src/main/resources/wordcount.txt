@@ -1,0 +1,9 @@
+hello c
+hello java
+hello javascript
+hello cpp
+hello python
+hello mysql
+hello redis
+hello spring
+hello world
