@@ -21,7 +21,7 @@ public class BatchWordCount {
         // StreamExecutionEnvironment env = StreamExecutionEnvironment.getExecutionEnvironment();
         ExecutionEnvironment env = ExecutionEnvironment.getExecutionEnvironment();
         // 从文件中读取数据
-        String inputPath = "src/main/resources/wordcount.txt";
+        String inputPath = "src/main/resources/data/wordcount.txt";
         DataSet<String> inputDataSet = env.readTextFile(inputPath);
         // 数据处理，按照空格分词展开，转换为(word,num)二元组进行统计
         // groupBy 0 按第一个位置的数据分组

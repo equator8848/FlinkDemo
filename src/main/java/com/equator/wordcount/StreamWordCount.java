@@ -19,7 +19,7 @@ public class StreamWordCount {
         // 创建流处理执行环境
         StreamExecutionEnvironment env = StreamExecutionEnvironment.getExecutionEnvironment();
         // 从文件中读取数据
-        String inputPath = "src/main/resources/wordcount.txt";
+        String inputPath = "src/main/resources/data/wordcount.txt";
         DataStream<String> inputDataStream = env.readTextFile(inputPath);
 
         // 基于数据流进行转换计算
